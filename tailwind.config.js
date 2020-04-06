@@ -3,6 +3,8 @@ module.exports = {
     fontFamily: {},
     extend: {},
   },
-  variants: {},
+  variants: {
+    textColor: ["visited"],
+  },
   plugins: [],
 };

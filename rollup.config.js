@@ -7,7 +7,7 @@ import { config } from "@sveltech/routify";
 import copy from "rollup-plugin-copy";
 import del from "del";
 import ppidChanged from "ppid-changed";
-import postcss from "rollup-plugin-postcss";
+//import postcss from "rollup-plugin-postcss";
 import autoPreprocess from "svelte-preprocess";
 
 const production = !process.env.ROLLUP_WATCH;
