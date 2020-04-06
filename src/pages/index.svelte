@@ -41,6 +41,6 @@
   }
 </style>
 
-<div class="flex justify-center">
-  <canvas class="w-20 h-20" bind:this={canvas} />
+<div class="flex justify-center pt-20">
+  <canvas class="w-20 h-20 " bind:this={canvas} />
 </div>

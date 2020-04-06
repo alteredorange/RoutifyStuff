@@ -9,6 +9,7 @@ import del from "del";
 import ppidChanged from "ppid-changed";
 //import postcss from "rollup-plugin-postcss";
 import autoPreprocess from "svelte-preprocess";
+// import cssnano from "cssnano";
 
 const production = !process.env.ROLLUP_WATCH;
 const { distDir, staticDir, sourceDir, dynamicImports: split } = config;
@@ -51,7 +52,14 @@ export default {
       },
     }),
     // postcss({
-    //   extract: "public/tailwind.css",
+    //   plugins: [
+    //     cssnano({
+    //       preset: "default",
+    //     }),
+    //   ],
+    // minimize: true,
+    //  extensions: [".css"],
+    //  extract: "build/bundle.css",
     // }),
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
