@@ -5,24 +5,20 @@
 <style>
   .huge {
     font-size: 12rem;
-  }
-  .e404 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
   }
 </style>
 
-<div class="e404">
-  <div class="inline image">
-    <img src="/404.png" alt="Crying Sadness" />
+<div class="flex flex-wrap w-11/12 pb-20 mx-auto lg:w-8/12">
+  <div class="w-full md:w-1/2 image">
+    <img src="/404.png" alt="Crying Sadness" class="inline " />
   </div>
-  <div class="inline huge">404</div>
-  <div class="big">
+  <div
+    class="self-center w-full text-center text-blue-500 align-middle md:w-1/2 bold huge">
+    404
+  </div>
+  <div class="w-full text-center big">
     Page not found.
-    <!-- link to the parent folder of _fallback.svelte -->
-    <a href={$url('../')}>Go back</a>
+    <a class="text-blue-500" href={$url('../')}>Go back?</a>
   </div>
-</div>
+</script>

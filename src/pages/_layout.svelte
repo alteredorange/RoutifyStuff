@@ -25,5 +25,5 @@
     </div>
   </main>
   <Footer />
-  <MobileNav />
+
 </div>
