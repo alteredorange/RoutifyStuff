@@ -1,20 +1,22 @@
 <!--Footer-->
 <footer class="">
   <div
-    class="flex items-center justify-between max-w-full px-6 py-2 mb-0
-    bg-gray-100 pt-auto md:flex-row sm:py-6">
-    <a
-      class="text-2xl font-bold text-orange-600 no-underline hover:no-underline
-      hover:text-black lg:text-4xl md:ml-20 lg:ml-20 xl:ml-40"
-      href="/">
-      <svg class="inline-block w-8 h-8 " viewBox="0 0 20 20">
-        <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
-      </svg>
-      BOLT
-    </a>
+    id="nav"
+    class="z-10 flex items-center justify-between w-screen max-w-full px-4 py-3 align-middle bg-gray-100 shadow-xl">
+
+    <img
+      src="/skullmoji.png"
+      alt="Skull and Crossbones"
+      class="w-12 h-12 align-middle md:ml-20 lg:ml-20 xl:ml-40 hover:bg-red-500" />
     <p
-      class="font-extrabold text-gray-500 uppercase md:mr-20 lg:mr-20 xl:mr-40">
-      © 2020 BOLT
+      class="pl-4 text-2xl font-bold text-gray-400 align-middle md:pt-3 md:text-5xl py-auto ">
+      Quibi: 2020-2020
     </p>
+
+    <img
+      src="/skullmoji.png"
+      alt="Skull and Crossbones"
+      class="w-12 h-12 align-middle md:mr-20 lg:mr-20 xl:mr-40 hover:bg-red-500" />
   </div>
+
 </footer>

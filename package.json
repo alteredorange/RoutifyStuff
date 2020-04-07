@@ -17,6 +17,7 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "@sveltech/routify": "^1.1.1-2",
     "autoprefixer": "^9.7.5",
+    "chart.js": "^2.9.3",
     "concurrently": "^5.0.2",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",

@@ -7,6 +7,14 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3em;
+  }
+  div#nav {
+    font-family: "Josefin Sans", sans-serif;
+  }
 </style>
 
 <Router {routes} />

@@ -12,6 +12,12 @@
   }
 </style>
 
+<header>
+  <!-- Custom Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto&display=swap"
+    rel="stylesheet" />
+</header>
 <div class="wholesite">
   <Nav />
   <main class="flex flex-1">
