@@ -1,6 +1,5 @@
 <script>
   import Nav from "./_components/Nav.svelte";
-  import MobileNav from "./_components/MobileNav.svelte";
   import Footer from "./_components/Footer.svelte";
 </script>
 
