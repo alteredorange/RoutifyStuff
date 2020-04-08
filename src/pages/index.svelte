@@ -1,6 +1,9 @@
 <script>
   import chart from "chart.js";
   import { onMount, afterUpdate } from "svelte";
+  import { loadStripe } from "@stripe/stripe-js";
+  import axios from "axios";
+  import { functions } from "./../firebase";
 
   let months = 24;
   let profit;
@@ -26,6 +29,60 @@
   var myChart;
   let colors = [];
   let vcMode = false;
+  let stripe;
+  let sku = "123";
+  let sessionId;
+  let shownAmount = 5;
+  $: amount = shownAmount * 100;
+  let show = false;
+
+  const STRIPE_PUBLIC_KEY = "pk_test_IXxcPonyerl9TBBGiD3Tp31000ZpHOWSMP"; // TODO: PUT YOUR STRIPE PUBLISHABLE KEY HERE
+  const FIREBASE_FUNCTION =
+    "https://us-central1-quibi-is-doomed.cloudfunctions.net/charge"; // TODO: PUT YOUR FIREBASE FUNCTIONS URL HERE
+  const FIREBASE_DONATE =
+    "https://us-central1-quibi-is-doomed.cloudfunctions.net/donate";
+  const FIREBASE_CHECKOUT =
+    "https://us-central1-quibi-is-doomed.cloudfunctions.net/payments/checkout";
+  const FIREBASE_TEST =
+    "https://us-central1-quibi-is-doomed.cloudfunctions.net/payments/test";
+
+  onMount(async function fun() {
+    try {
+      stripe = await loadStripe(STRIPE_PUBLIC_KEY);
+      // console.log(stripe);
+      // const res = await stripe.then(addCheckoutMethod());
+      //  const res2 = await addCheckoutMethod();
+    } catch (err) {
+      console.log(err);
+    }
+  });
+
+  async function startCheckout2(s) {
+    const { error } = await stripe.redirectToCheckout({
+      // Make the id field from the Checkout Session creation API response
+      // available to this file, so you can provide it as parameter here
+      // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+      sessionId: s
+    });
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
+  }
+
+  async function checkout() {
+    const res = await fetch(FIREBASE_CHECKOUT, {
+      //mode: "no-cors",
+      method: "POST",
+      dataType: "json",
+      body: JSON.stringify({
+        amount: amount
+      })
+    });
+    const data = await res.json();
+    sessionId = await data.id;
+    startCheckout2(await sessionId);
+    console.log(data);
+  }
 
   async function calcMe() {
     money = [];
@@ -59,7 +116,7 @@
   }
 
   function createChart() {
-    ctx = document.getElementById("myChart");
+    ctx = document.getElementById("myChart").getContext("2d");
     if (!myChart) {
       myChart = new Chart(ctx, {
         type: "bar",
@@ -103,10 +160,24 @@
       myChart.update();
     }
   }
+  onMount(async () => {
+    try {
+      const res = await calcMe();
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
-  onMount(calcMe);
-  afterUpdate(calcMe);
-  afterUpdate(createChart);
+  afterUpdate(async () => {
+    try {
+      if (document) {
+        const res = await calcMe();
+        const res2 = await createChart();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -248,7 +319,6 @@
   .paragraphs {
     text-indent: 4em;
     line-height: 1.65em;
-    kerning: 2em;
   }
   .plea {
     font-weight: 100;
@@ -544,8 +614,45 @@
     Made by a totally normal, not stir crazy, unemployed person with lots of
     <img src="/love.png" alt="love" class="inline w-6" />
     . If this made you laugh or cry, or did absolutely nothing for you
-    whatsoever, consider buying me a
-    <img src="/croissant.png" alt="croissant" class="inline w-6" />
+    whatsoever, consider
+    <span
+      on:click={() => (show = !show)}
+      class="text-blue-400 underline cursor-pointer">
+      buying me a
+      <img src="/croissant.png" alt="croissant" class="inline w-6" />
+    </span>
     . It would be better than buying a Quibi!
   </div>
 </div>
+{#if show}
+  <div class="max-w-lg mx-auto text-center slidecontainer">
+    <button
+      class="px-4 py-3 text-white bg-blue-400 rounded-md shadow-sm"
+      on:click={checkout}>
+      Donate ${shownAmount}
+    </button>
+  </div>
+  <div class="max-w-lg pt-6 pb-16 mx-auto text-center slidecontainer">
+    <input
+      type="range"
+      min="1"
+      max="777"
+      bind:value={shownAmount}
+      class="slider"
+      id="myRange" />
+  </div>
+  <div class="max-w-sm pt-6 pb-16 mx-auto text-center slidecontainer">
+    {#if shownAmount > '20' && shownAmount < '100'}
+      <img src="/smile.png" alt="Smile" />
+    {:else if shownAmount > '100' && shownAmount < '500'}
+      <img src="/laugh.png" alt="Laughing Nervously" />
+    {:else if shownAmount >= '500' && shownAmount < '777'}
+      <img src="/shocked.png" alt="Shocked Face" />
+    {:else if shownAmount == '777'}
+      <img src="/amazed.png" alt="Amazed Beyond Belief, are you kidding me?!" />
+    {:else}
+      <img src="/thumbsup.png" alt="Thumbs Up" />
+    {/if}
+
+  </div>
+{/if}
