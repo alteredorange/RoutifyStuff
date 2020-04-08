@@ -7,8 +7,8 @@
     alt="Skull and Crossbones"
     class="w-12 h-12 align-middle md:ml-20 lg:ml-20 xl:ml-40 hover:bg-red-500" />
   <p
-    class="pl-4 text-2xl font-bold text-purple-600 align-middle md:pt-3 md:text-5xl py-auto ">
-    QUIBI IS DOOMED
+    class="pl-4 text-2xl font-bold text-purple-600 align-middle md:pt-3 md:text-4xl lg:text-6xl py-auto ">
+    <a href="/">QUIBI IS DOOMED</a>
   </p>
 
   <img

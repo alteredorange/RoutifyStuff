@@ -14,6 +14,7 @@
   }
   div#nav {
     font-family: "Josefin Sans", sans-serif;
+    font-size: 3em;
   }
 </style>
 

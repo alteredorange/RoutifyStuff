@@ -2,8 +2,7 @@
   import chart from "chart.js";
   import { onMount, afterUpdate } from "svelte";
   import { loadStripe } from "@stripe/stripe-js";
-  import axios from "axios";
-  import { functions } from "./../firebase";
+  //import { functions } from "./../firebase";
 
   let months = 24;
   let profit;
@@ -36,22 +35,13 @@
   $: amount = shownAmount * 100;
   let show = false;
 
-  const STRIPE_PUBLIC_KEY = "pk_test_IXxcPonyerl9TBBGiD3Tp31000ZpHOWSMP"; // TODO: PUT YOUR STRIPE PUBLISHABLE KEY HERE
-  const FIREBASE_FUNCTION =
-    "https://us-central1-quibi-is-doomed.cloudfunctions.net/charge"; // TODO: PUT YOUR FIREBASE FUNCTIONS URL HERE
-  const FIREBASE_DONATE =
-    "https://us-central1-quibi-is-doomed.cloudfunctions.net/donate";
+  const STRIPE_PUBLIC_KEY = "pk_live_CrWz5KlLCDuA16NhgfG9lyIt00cLNoxsMM"; // TODO: PUT YOUR STRIPE PUBLISHABLE KEY HERE
   const FIREBASE_CHECKOUT =
     "https://us-central1-quibi-is-doomed.cloudfunctions.net/payments/checkout";
-  const FIREBASE_TEST =
-    "https://us-central1-quibi-is-doomed.cloudfunctions.net/payments/test";
 
   onMount(async function fun() {
     try {
       stripe = await loadStripe(STRIPE_PUBLIC_KEY);
-      // console.log(stripe);
-      // const res = await stripe.then(addCheckoutMethod());
-      //  const res2 = await addCheckoutMethod();
     } catch (err) {
       console.log(err);
     }
@@ -81,7 +71,7 @@
     const data = await res.json();
     sessionId = await data.id;
     startCheckout2(await sessionId);
-    console.log(data);
+    // console.log(data);
   }
 
   async function calcMe() {
@@ -632,7 +622,7 @@
       Donate ${shownAmount}
     </button>
   </div>
-  <div class="max-w-lg pt-6 pb-16 mx-auto text-center slidecontainer">
+  <div class="max-w-lg pt-6 pb-5 mx-auto text-center slidecontainer">
     <input
       type="range"
       min="1"
@@ -641,13 +631,14 @@
       class="slider"
       id="myRange" />
   </div>
-  <div class="max-w-sm pt-6 pb-16 mx-auto text-center slidecontainer">
+  <div
+    class="flex content-center justify-center max-w-xs pt-4 pb-16 mx-auto text-center">
     {#if shownAmount > '20' && shownAmount < '100'}
       <img src="/smile.png" alt="Smile" />
     {:else if shownAmount > '100' && shownAmount < '500'}
       <img src="/laugh.png" alt="Laughing Nervously" />
     {:else if shownAmount >= '500' && shownAmount < '777'}
-      <img src="/shocked.png" alt="Shocked Face" />
+      <img src="/shock.png" alt="Shocked Face" />
     {:else if shownAmount == '777'}
       <img src="/amazed.png" alt="Amazed Beyond Belief, are you kidding me?!" />
     {:else}
@@ -656,3 +647,10 @@
 
   </div>
 {/if}
+<div id="preload" class="hidden">
+  <img src="/thumbsup.png" alt="Thumbs Up" />
+  <img src="/amazed.png" alt="Amazed Beyond Belief, are you kidding me?!" />
+  <img src="/shock.png" alt="Shocked Face" />
+  <img src="/smile.png" alt="Smile" />
+  <img src="/laugh.png" alt="Laughing Nervously" />
+</div>

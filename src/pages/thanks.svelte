@@ -4,22 +4,18 @@
 
 <style>
   .huge {
-    font-size: 12rem;
-
+    font-size: 6rem;
     font-family: "Josefin Sans", sans-serif;
   }
 </style>
 
 <div class="flex flex-wrap w-11/12 max-w-full pb-20 mx-auto lg:w-8/12">
   <div class="w-full md:w-1/2 image">
-    <img src="/404.png" alt="Crying Sadness" class="inline " />
+    <img src="/thanks.png" alt="Happy Thank You!" class="inline " />
   </div>
   <div
     class="self-center w-full text-center text-blue-500 align-middle text-7xl md:w-1/2 bold lg:text-8xl">
-    404
+    THANKS!
   </div>
-  <div class="w-full text-center big">
-    Page not found.
-    <a class="text-blue-500" href={$url('../')}>Go back?</a>
-  </div>
+
 </div>
