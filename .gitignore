@@ -2,3 +2,6 @@
 /dist/
 .DS_Store
 **/.history
+/.firebase/
+/functions/
+.firebaserc

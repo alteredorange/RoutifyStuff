@@ -377,25 +377,25 @@
       Yes, this website was built mostly just to rant about Quibi. If you
       haven't heard what Quibi is, it's a company that managed to raise 1.8
       BILLION dollars before launching anything. They just launched on April 6,
-      2020 and, well... I was mad enough to make an entire website explaining
-      how dumb it is
+      2020 and, well... I was annoyed enough to make an entire website
+      explaining how dumb it is
       <img src="/crazy.png" alt="Crazy Emoji" class="inline w-6 " />
       .
     </div>
     <div class="pt-5 text-gray-900 paragraphs">
       Quibi is essentially trying to be the Netflix of mobile. But Netflix
-      already is the Netflix of mobile... Quibi was started by two old(er)
-      billionaires, so they definitely know what the kids are into these days.
-      It's definitely giving me an Apple TV+ vibe: Mostly rich, mostly older
-      people saying, we know what people want! Let's throw x amount of dollars
-      at it, and see what comes out the other end. In Apple TV+'s case, they
-      managed to produce a small number of rather lame shows. But they wanted to
-      make it seem like a hit, so they have (and still are) giving out a free
-      ONE YEAR subscription if you buy any Apple device. Even with that they've
-      only managed 33 million subscribers. That's fine for Apple though, because
-      they have $200+ BILLION just sitting in their piggy bank. They can
-      bankroll as many sub-par TV shows as they want for years to come, and not
-      fall into financial peril.
+      already is the Netflix of mobile, so we're off to a bad start... Quibi was
+      started by two old(er) millionaires, so they definitely know what the kids
+      are into these days. It's giving me an Apple TV+ vibe: Mostly rich, mostly
+      older people saying, "We know what them millenials want! Let's throw x
+      amount of dollars at it, and see what comes out the other end!" In Apple
+      TV+'s case, they managed to produce a small number of rather (in my no way
+      expert opinion) lame shows. But they wanted to make it seem like a hit, so
+      they have (and still are) giving out a free ONE YEAR subscription if you
+      buy any Apple device. Even with that they've only managed 33 million
+      subscribers. That's fine for Apple though, because they have $200+ BILLION
+      just sitting in their piggy bank. They can bankroll as many sub-par TV
+      shows as they want for years to come, and not fall into financial peril.
     </div>
     <div class="pt-5 text-gray-900 paragraphs">
       Which brings us back to Quibi. Quibi isn't Apple. They have no other
@@ -448,9 +448,9 @@
       they only manage 15 million subscribers, it would be 2 years before they
       make a penny. They're definitely going to have to raise more money, but I
       don't think anyone will want to touch them after initial subscriber
-      numbers come out. Below is an interactive chart where you can play with
-      different scenarios. Feel free to play around with it and see how many
-      millions of subscribers Quibi needs to break even!
+      numbers come out. Below is an interactive chart to imagine different
+      scenarios. Feel free to play around with it and see how many millions of
+      subscribers Quibi needs to break even!
     </div>
 
   </div>
@@ -602,10 +602,10 @@
       mode, because then casting wouldn't be much of an upgrade. But they
       actually have all the videos in widescreen! The entire world is on lock
       down, with access to very large, very capable televisions, but no, this is
-      premium content meant to be watched only on your smallest of screens!
-      Hopefully they'll come to their senses and fix this ASAP. It would
-      probably take a day to implement, and there's no excuse for a video only
-      app in 2020 not to have casting.
+      premium content meant to be watched only on your phone! Hopefully they'll
+      come to their senses and fix this ASAP. It would probably take a day to
+      implement, and there's no excuse for a video only app in 2020 not to have
+      casting.
     </div>
     <div class="pt-5 text-gray-900 paragraphs">
       There's other things to rant about, but we'll end with just one more:
@@ -633,10 +633,10 @@
       "entertainment" shows, all with less than 10 episodes. And because Quibis
       are all under 10 minutes, you can watch all of those in 1,000 minutes!
       That's two binge sessions, or even just one with you're feeling extra
-      adventurous. Although you probably won't be doing too much binging because
-      again, you have to watch everything ON YOUR PHONE! Maybe that was always
-      part of the plan, to prevent people from watching literally everything
-      they have to offer in 2 days...
+      adventurous. Although you probably won't be doing too much binging
+      because, again, you have to watch everything ON YOUR PHONE! Maybe that was
+      always part of the plan, to prevent people from watching literally
+      everything they have to offer in 2 days...
     </div>
     <div
       class="text-3xl text-center underline bold md:pt-10 "
@@ -646,13 +646,13 @@
     <div class="pt-5 text-gray-900 paragraphs">
       The most hilarious thing about all of this is that Quibi is offering
       people 3 months free right now. While they're in quarantine, with nowhere
-      else to go. So if people do like a show, they're FOR SURE finish it during
-      their free trial. And since there's absolutely no back catalog, why would
-      you stick around? Did they not notice Netflix and Disney spending their
-      millions on securing hundreds of shows to plump out their back catalog?
-      Why did Quibi ever get this much money? These Venture Capitalist firms
-      need to calm down. And so do I! That's it for now. Go do something nice
-      for someone else and have a great day/month/2020!
+      else to go. So if people do like a show, they will FOR SURE finish it
+      during their free trial. And since there's absolutely no back catalog, why
+      would you stick around? Did they not notice Netflix and Disney spending
+      their millions on securing hundreds of shows to plump out their back
+      catalog? Why did Quibi ever get this much money? These Venture Capitalist
+      firms need to calm down. And so do I! That's it for now. Go do something
+      nice for someone else and have a great day/month/2020!
     </div>
     <div class="py-12 text-center text-gray-800 plea">
       Made by a totally normal, not stir crazy, unemployed person with lots of
