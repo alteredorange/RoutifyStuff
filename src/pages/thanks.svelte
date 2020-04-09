@@ -4,8 +4,14 @@
 
 <style>
   .huge {
-    font-size: 6rem;
+    font-size: 20vw;
     font-family: "Josefin Sans", sans-serif;
+  }
+
+  @media screen and (min-width: 741px) {
+    .huge {
+      font-size: 10vw;
+    }
   }
 </style>
 
@@ -14,7 +20,7 @@
     <img src="/thanks.png" alt="Happy Thank You!" class="inline " />
   </div>
   <div
-    class="self-center w-full text-center text-blue-500 align-middle text-7xl md:w-1/2 bold lg:text-8xl">
+    class="self-center w-full text-center text-blue-500 align-middle md:w-1/2 bold huge">
     THANKS!
   </div>
 
