@@ -34,7 +34,7 @@ app.post("/checkout", async (req, res) => {
         },
       ],
       success_url: "https://quibi-is-doomed.web.app/thanks",
-      cancel_url: "https://quibi-is-doomed.web.app//cancel",
+      cancel_url: "https://quibi-is-doomed.web.app/cancel",
     });
 
     res.status(200).send(checkoutSession);

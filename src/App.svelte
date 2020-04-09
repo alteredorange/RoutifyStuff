@@ -9,12 +9,11 @@
   @tailwind utilities;
 
   body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.3em;
+    /* font-family: "Open Sans", sans-serif;
+    font-size: 1.3em; */
   }
   div#nav {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 3em;
   }
 </style>
 
